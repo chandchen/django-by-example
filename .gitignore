@@ -1,9 +1,10 @@
 *.pyc
 *.pyo
+.idea
 .installed.cfg
 bin
 develop-eggs
 eggs
 parts
 src/*.egg-info
-.idea
+src/db.sqlite3
