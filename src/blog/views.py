@@ -27,8 +27,8 @@ def post_list(request):
 class PostListView(ListView):
     queryset = Post.published.all()
     context_object_name = 'posts'
-    paginate_by = 3
-    template_name = 'blog/post/list.html'
+    paginate_by = 5
+    template_name = 'story/index.html'
 
 
 def post_detail(request, year, month, day, post):
@@ -49,7 +49,7 @@ def post_detail(request, year, month, day, post):
     else:
         comment_form = CommentForm()
     return render(request,
-                  'blog/post/detail.html',
+                  'story/single.html',
                   {'post': post,
                    'comments': comments,
                    'new_comment': new_comment,
